@@ -1,14 +1,14 @@
 process.stdin.once('data', (input) =>{ 
         var tamGiac = input.toString().split(' ');
-        var canhA = parseInt(tamGiac[0]);
-        var canhB = parseInt(tamGiac[1]);
-        var canhC = parseInt(tamGiac[2]);
+        var canhA = parseFloat(tamGiac[0]);
+        var canhB = parseFloat(tamGiac[1]);
+        var canhC = parseFloat(tamGiac[2]);
         function checkTamGiac(canhA, canhB, canhC) {
             if (canhA + canhB > canhC && canhA + canhC > canhB && canhB + canhC >canhA) {
-                var p =(canhA + canhB + canhC)/2;
-                var s = Math.sqrt(p*(p - canhA)*(p-canhB) * (p- canhC));
-                console.log(p.toFixed(2) + " " + s.toFixed(2));
-                
+                var p1 =canhA + canhB + canhC;
+                var chuVi = (canhA + canhB + canhC)/2;
+                var s = Math.sqrt(chuVi*(chuVi - canhA)*(chuVi-canhB) * (chuVi- canhC));
+                console.log(p1.toFixed(2) + " " + s.toFixed(2));          
             } else{
                 console.log("NO");
             }
